@@ -1,0 +1,111 @@
+/* base */
+:root { font-family: system-ui, Arial, sans-serif; }
+html, body, #root { height: 100%; }
+body { margin: 0; background: #0b1020; color: #eaf2ff; }
+
+/* ===== fundo ocupando a tela toda ===== */
+.page {
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  background-color: #0b1020; /* fallback enquanto não tem foto */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+/* camada escura translúcida por cima do fundo */
+.page-overlay {
+  min-height: 100vh;
+  width: 100%;
+  background: rgba(0,0,0,0.55);
+  backdrop-filter: blur(2px);
+}
+
+/* área de conteúdo centralizada (não limita o fundo) */
+.content {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 48px 16px 64px;
+  text-align: center;
+}
+
+h1 { margin: 0 0 24px; }
+
+/* busca + autocomplete */
+.search {
+  position: relative;
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+.search input {
+  flex: 1;
+  max-width: 360px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #2b3357;
+  background: #111736;
+  color: #eaf2ff;
+}
+.search button {
+  padding: 10px 16px;
+  border-radius: 8px;
+  border: none;
+  background: #3b82f6;
+  color: #fff;
+  cursor: pointer;
+}
+.search button:hover { filter: brightness(1.08); }
+
+.suggestions {
+  list-style: none;
+  margin: 4px 0 0;
+  padding: 0;
+  background: #111736;
+  border-radius: 8px;
+  border: 1px solid #2b3357;
+  position: absolute;
+  width: 100%;
+  max-width: 360px;
+  z-index: 100;
+}
+.suggestions li {
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: background .2s;
+}
+.suggestions li:hover { background: #3b82f6; color: #fff; }
+
+/* card de clima */
+.card {
+  margin: 16px auto 0;
+  width: 100%;
+  max-width: 480px;
+  border-radius: 16px;
+  overflow: hidden;
+  background-color: rgba(19,27,58,0.82);
+  box-shadow: 0 8px 28px rgba(0,0,0,0.45);
+  text-align: center;
+}
+.card .overlay {
+  background: rgba(0,0,0,0.45);
+  padding: 20px;
+  backdrop-filter: blur(2px);
+}
+
+.city { font-size: 18px; opacity: .9; margin-bottom: 8px; }
+.temp { font-size: 56px; font-weight: 700; }
+.desc { font-size: 16px; opacity: .9; text-transform: capitalize; }
+
+/* estados e rodapé */
+.error {
+  color: #ff9cab;
+  background: #3b0d1a;
+  border: 1px solid #5a0f1e;
+  padding: 12px;
+  border-radius: 8px;
+}
+footer { margin-top: 24px; opacity: .75; }

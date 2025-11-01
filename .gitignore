@@ -1,0 +1,17 @@
+# Dependências
+node_modules/
+dist/
+.vscode/
+.DS_Store
+
+# Variáveis locais e segredos
+.env
+.env.local
+.env.*.local
+
+# Logs e caches
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.cache/
