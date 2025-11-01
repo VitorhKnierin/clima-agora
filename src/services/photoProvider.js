@@ -1,5 +1,7 @@
 // src/services/photoProvider.js
 // Ordem de busca: Wikipedia (pt → en) por título → Wikimedia geosearch (lat/lon) → Pixabay (fallback)
+// Serviço responsável por buscar uma foto da cidade via API Unsplash
+// Segue o princípio SRP: responsabilidade única e isolada
 
 const PIXABAY_KEY = import.meta.env.VITE_PIXABAY_KEY;
 
