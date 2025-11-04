@@ -76,8 +76,8 @@ Adicionar ao arquivo .gitignore (já incluso no projeto):
 node_modules/
 dist/
 
-Autor
-Vitor Hugo Meira da Costa Knierin
+Autores
+Vitor Hugo Meira da Costa Knierin - Guilherme Nicolau - João Vitor Morales
 IFSUL – Campus Bagé
 Curso: Tecnólogo em Análise e Desenvolvimento de Sistemas
 
